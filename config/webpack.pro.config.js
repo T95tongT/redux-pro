@@ -1,13 +1,10 @@
 
-
 const {merge} = require("webpack-merge")
-const  common = require("./webpack.common.js")
+const common = require("./webpack.common.js")
 module.exports = (env) => {
     return merge(common(), {
-        devServer: {
-            open: true
-        },
-        mode:'development',
+      
+        mode:'production',
         devtool: "source-map",
     })
 }
