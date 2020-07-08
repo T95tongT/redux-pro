@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-07-08 17:02:51
- * @LastEditTime: 2020-07-08 17:22:23
+ * @LastEditTime: 2020-07-08 17:54:13
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \redux-pro\config\webpack.common.js
@@ -39,8 +39,9 @@ module.exports = (env) => {
         ],
         module: {
             rules : [
+               
                 {
-                    test: /\.js[x]/,
+                    test: /\.js[x]?$/,
                     exclude: /(node_modules)/,
                     use:["babel-loader"]
                 },
