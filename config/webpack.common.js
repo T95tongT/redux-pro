@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-07-08 17:02:51
- * @LastEditTime: 2020-07-08 17:54:13
+ * @LastEditTime: 2020-07-09 10:29:01
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \redux-pro\config\webpack.common.js
@@ -29,7 +29,7 @@ module.exports = (env) => {
     return {
         entry : entries,
         output:{
-            path: path.resolve(__dirname, "dist"),
+            path: path.resolve(__dirname, "./../dist"),
             filename : "[name].[hash].js",
             chunkFilename : "[name].[hash].js"
         },
@@ -41,7 +41,7 @@ module.exports = (env) => {
             rules : [
                
                 {
-                    test: /\.js[x]?$/,
+                    test: /\.js[x]?/,
                     exclude: /(node_modules)/,
                     use:["babel-loader"]
                 },
