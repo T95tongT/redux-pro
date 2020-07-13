@@ -1,0 +1,21 @@
+webpack:{
+    decribe:是一种前端资源构建工具，也是静态模块打包器。webpack是构建工具的一种
+    chunk：假如index.js为入口文件， 则引入的index.less，等其它依赖文件，形成的叫chunk代码块。
+    打包：然后将chunk的各种资源的转换（css-loader，babel-loader等），这个过程叫打包；
+    bundle：打包之后， 将打包好的chunk文件输出，输出的文件就叫bundle；
+    模块：每一个export导出的都叫模块。
+
+    config:{
+        entry:入口文件， 指示webpack以哪个文件为入口起点开始打包，分析构建依赖图。
+        output：指示webpack打包后的bundles文件输出到哪里，以及如何命名。
+        loader：处理一些webpack不能够解析的文件类型，（webpack只能解析js。json文件）
+        plugin：执行一些更广的任务，压缩、优化等
+        mode：{
+            dev：打包后的bundles存放在浏览器的localhost下，也就是内存中（猜测是session）
+            pro：比dev模式多一个压缩文件（体积小，省内存）；打包后的bundles放在dist（暂时起名output.path=“dist”）。
+        }
+    }，
+    src是项目的源代码，采用的是es6。webpack.config.js的配置文件是采用的commonjs；
+    __dirname  nodejs的变量，代表当前文件的目录绝对路径。
+    
+}
