@@ -54,7 +54,7 @@ class Routers extends Component {
         111111111111
         {location.pathname}
         <br />
-        <Router basename="/entry/index.html">
+        <Router basename="/">
           <ul>
             <li>
               <Link to="/one/123">one====123会显示在url中</Link>

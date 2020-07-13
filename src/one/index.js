@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-04-03 21:18:18
- * @LastEditTime: 2020-07-06 13:31:10
+ * @LastEditTime: 2020-07-10 11:06:44
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \redux-pro\src\one\index.js
@@ -48,9 +48,11 @@ export default class  One extends React.Component{
                 <button onClick={()=>{
                     this.props.history.push("/two")
                 }}>进入two</button>
-                传递过来的id的值={this.props.match.params.id}
+                传递过来的id的值=
+                {/* {this.props.match.params.id} */}
             <br/>
-              当前state的数据是 {this.props.oneState}
+            当前state的数据是 
+              {/* 当前state的数据是 {this.props.oneState} */}
 
               
             </div>  
