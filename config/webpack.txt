@@ -60,7 +60,7 @@ webpack:{
                     loader: "url-loader",//url-loader可以将图片为url（地址）转换为base64的字符串，能减少请求数，一旦图片过大， 则会自动转换为file-loader.
                     options:{
                         limit : 8*1024,
-                        esModule: false, //采用commonJs
+                        esModule: false, //采用commonJs,因为url-loader默认是es，然后html-loader是commonJS语法，当通过html-loader转换后，url-loader并不能解析， 所以要将url-loader的es改成commonJS
                         name: "[hash:10].[ext]"//ext：原来的文件的扩展名
                         outputPath: "images" //将图片打包后输出到image文件夹下。其他资源也类似
                     }
@@ -193,5 +193,10 @@ webpack:{
                                 ↓
                                 获取回来的就是二进制数据。
     }
+
+    
+
+
+
 
 }
