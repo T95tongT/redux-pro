@@ -37,7 +37,6 @@ export default class App extends React.Component {
     return (
       <Fragment>
         {this.props.children ? this.props.children : null}
-
       </Fragment>
     )
   }
@@ -51,7 +50,8 @@ class Routers extends Component {
   render() {
     return (
       <Fragment>
-        111111111111
+        haha1111
+        1111222dddd22222 
         {location.pathname}
         <br />
         <Router basename="/">
