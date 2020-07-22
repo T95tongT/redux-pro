@@ -46,6 +46,7 @@ webpack:{
         },
       
         module:{
+            loaders://webpack2.x后就已经被移除， 现在推荐使用rules
             rules:[
                 //  loader：处理一些webpack不能够解析的文件类型，（webpack只能解析js。json文件）；
                 //  loader的执行顺序是左-->右或下-->上。 
