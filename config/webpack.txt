@@ -54,10 +54,15 @@ webpack:{
             extensions：[".js",".jsx"....],//按顺序解析这些后缀名。如果没有，可能会解析报错
             mainFileds：["文件1"," 文件2"]//当从npm库中引入模块时，此选项决定在package.json中使用哪个字段导入模块。
         },
+     
         externals：{//打包时排除， 在运行时再去从外部获取。优化性能的一种方案。
             "React": "react",
             "Redux": "redux"....
         },
+        devtool: "eval-source-map"||"source-map"||.....,
+                        ↓                 ↓
+                        ↓           源码且带有.map文件
+                    源码，但是不带有.map文件
         plugin：执行一些更广的任务，压缩、优化等
         mode：{
             dev：打包后的bundles存放在浏览器的localhost下，也就是内存中（猜测是session）
@@ -96,6 +101,10 @@ webpack:{
         plugins:[
             HTMLWebpackPlugin：{
                 管理输出。
+                title: "测试脚手架",
+                icon: path.resolve(__dirname, "../assets/image/favicon.png"),
+                template: pathHtml,
+                filename : pathKey+ ".html" //一定要和open的插件的url一样，否则找不到模板，就找不到页面
             }
             CleanWebpackPlugin：{
                 作用：清除旧的dist文件。
