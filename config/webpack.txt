@@ -133,6 +133,12 @@ webpack:{
                 //该插件用于将css文件提取到单独的文件中。他为每一个包含css的js文件创建一个css文件。
                 并且使用MiniCssExtractPlugin.loader代替style-loader，最终形式是《link》
             },
+            copyWebpackPlugin: {
+                内部是异步实现的。
+                将单个文件或者整个目录（已存在）复制到构建目录中。
+                copy-webpack-plugin并不是复制在构建过程中生成的文件，而是原本就存在的文件。
+                flattrn: 此参数设置为true， 那么它只会拷贝最底层的文件，而不会把文件夹路径都拷贝
+            }
         ]
     }，
     src是项目的源代码，采用的是es6。webpack.config.js的配置文件是采用的commonjs；
